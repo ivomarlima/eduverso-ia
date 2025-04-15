@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Favoritos - EduVerso IA</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  
+    <!-- LINK CORRETO E CONFIÁVEL DO FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-papUwoYUvDGjz0e+Q3zSb36K0lZkFqUoYbIhwZzUGnC+Fa0jNHhO3EyhJkHD3B+6FR1POCArOfNR9GoQpjR0jg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  
+<body>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" style="width: 100%; height: auto;" />
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="favoritos.html"><i class="fas fa-star"></i> Favoritos</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>⭐ Artigos Favoritados</h2>
+      <div id="artigos-favoritos" class="card-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+
+  <!-- Script para carregar os favoritos -->
+  <script>
+    const container = document.getElementById("artigos-favoritos");
+    const favoritos = JSON.parse(localStorage.getItem("favoritosEduVerso")) || [];
+
+    fetch("artigos.json")
+      .then(res => res.json())
+      .then(artigos => {
+        const filtrados = artigos.filter(art => favoritos.includes(art.titulo));
+
+        if (filtrados.length === 0) {
+          container.innerHTML = "<p style='color:#ccc; text-align:center;'>Você ainda não marcou nenhum artigo como favorito ⭐.</p>";
+          return;
+        }
+
+        filtrados.forEach(art => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.innerHTML = `
+            <div class="favorito">
+              <i class="fas fa-star favoritado"></i>
+            </div>
+            <img src="${art.imagem}" alt="${art.titulo}">
+            <h3>${art.titulo}</h3>
+            <p>${art.resumo}</p>
+            <a href="${art.url}" class="btn">Leia mais</a>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+
+  <!-- Estilo local para a estrela -->
+  <style>
+    .favorito {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+    }
+
+    .favorito i {
+      font-size: 20px;
+      color: #facc15;
+    }
+
+    .card {
+      position: relative;
+    }
+  </style>
+
+  <!-- Modo Claro/Escuro -->
+  <script>
+    function alternarModo() {
+      const body = document.body;
+      const botao = document.querySelector('.toggle-mode');
+
+      body.classList.toggle('light-mode');
+
+      if (body.classList.contains('light-mode')) {
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+        localStorage.setItem('modoEduVerso', 'claro');
+      } else {
+        botao.innerHTML = '<i class="fas fa-moon"></i> Modo Escuro';
+        localStorage.setItem('modoEduVerso', 'escuro');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const modoSalvo = localStorage.getItem('modoEduVerso');
+      const botao = document.querySelector('.toggle-mode');
+
+      if (modoSalvo === 'claro') {
+        document.body.classList.add('light-mode');
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+      }
+    });
+  </script>
+
+  <button class="toggle-mode" onclick="alternarModo()">
+    <i class="fas fa-moon"></i> Modo Escuro
+  </button>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutoriais - EduVerso IA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" style="width: 100%; height: auto;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="favoritos.html"><i class="fas fa-star"></i> Favoritos</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section style="text-align: center; padding: 60px 20px;">
+      <h2 style="color: #06b6d4; font-size: 28px;">🛠️ Tutoriais EduVerso IA</h2>
+      <p style="color: #cbd5e1; font-size: 18px; max-width: 600px; margin: 20px auto;">
+        Em breve você encontrará aqui uma coleção de tutoriais passo a passo para explorar ferramentas digitais, estratégias de estudo e práticas inovadoras com IA na educação.
+      </p>
+      <p style="color: #94a3b8; font-size: 16px;">Estamos preparando tudo com muito carinho. Volte em breve para explorar!</p>
+      <a href="index.html" class="btn destaque-btn" style="margin-top: 30px; display: inline-block;">Voltar ao Início</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+  <script>
+    function alternarModo() {
+      const body = document.body;
+      const botao = document.querySelector('.toggle-mode');
+  
+      body.classList.toggle('light-mode');
+  
+      if (body.classList.contains('light-mode')) {
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+        localStorage.setItem('modoEduVerso', 'claro');
+      } else {
+        botao.innerHTML = '<i class="fas fa-moon"></i> Modo Escuro';
+        localStorage.setItem('modoEduVerso', 'escuro');
+      }
+    }
+  
+    // Aplicar o modo salvo ao carregar
+    window.addEventListener('DOMContentLoaded', () => {
+      const modoSalvo = localStorage.getItem('modoEduVerso');
+      const botao = document.querySelector('.toggle-mode');
+  
+      if (modoSalvo === 'claro') {
+        document.body.classList.add('light-mode');
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+      }
+    });
+  </script>
+  
+</body>
+<button class="toggle-mode" onclick="alternarModo()">
+  <i class="fas fa-moon"></i> Modo Escuro
+</button>
+
+</html>

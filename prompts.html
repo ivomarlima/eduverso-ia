@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptStore - EduVerso IA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" style="width: 100%; height: auto;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="favoritos.html"><i class="fas fa-star"></i> Favoritos</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section style="text-align: center; padding: 60px 20px;">
+      <h2 style="color: #6366f1; font-size: 32px;">✨ PromptStore EduVerso IA</h2>
+      <p style="color: #cbd5e1; font-size: 18px; max-width: 700px; margin: 20px auto;">
+        Torne-se um mestre da Inteligência Artificial mesmo usando versões gratuitas!<br>
+        Aqui você encontra prompts prontos, otimizados e testados por especialistas, capazes de gerar <strong>respostas dignas de um plano pago</strong> — mesmo no ChatGPT Free, Gemini, Copilot e outros!
+      </p>
+      <p style="color: #94a3b8; font-size: 16px;">Você não precisa pagar caro por IA se tiver o prompt certo. E o seu, está aqui.</p>
+    </section>
+
+    <section style="padding: 40px 20px;">
+      <h3 style="color: #06b6d4; font-size: 24px; text-align: center; margin-bottom: 30px;">📂 Prompts Gratuitos</h3>
+      <div class="card-container">
+
+        <div class="card">
+            <img src="imagens/prompt-flashcards.jpg" alt="Prompt para criar flashcards com IA">
+            <h3>Flashcards Inteligentes com IA</h3>
+            <p>Use este prompt gratuito para criar cartões de memorização a partir de qualquer conteúdo.</p>
+            <textarea readonly id="prompt1" style="width: 90%; margin: 10px auto; padding: 10px; font-size: 14px; background: #0f172a; color: #f8fafc; border: 1px solid #334155; border-radius: 6px;">
+          Sou estudante e quero revisar este conteúdo. Gere flashcards de perguntas e respostas em formato objetivo, com foco em memorização ativa e revisão espaçada:
+          [COLE O CONTEÚDO AQUI]
+            </textarea>
+            <button onclick="copiarPrompt('prompt1')" class="btn copiar-btn">📋 Copiar Prompt</button>
+          </div>
+          
+          <div class="card">
+            <img src="imagens/prompt-mapa-mental.jpg" alt="Prompt para criar mapas mentais">
+            <h3>Mapa Mental Estruturado</h3>
+            <p>Crie um mapa mental para estudar com clareza visual e conexão entre ideias principais.</p>
+            <textarea readonly id="prompt2" style="width: 90%; margin: 10px auto; padding: 10px; font-size: 14px; background: #0f172a; color: #f8fafc; border: 1px solid #334155; border-radius: 6px;">
+          Organize o conteúdo abaixo em um mapa mental estruturado com tópicos principais, subtópicos e palavras-chave. Seja claro e objetivo:
+          [COLE O CONTEÚDO AQUI]
+            </textarea>
+            <button onclick="copiarPrompt('prompt2')" class="btn copiar-btn">📋 Copiar Prompt</button>
+          </div>
+          
+
+      </div>
+    </section>
+
+    <section style="text-align: center; padding: 30px;">
+      <p style="color: #cbd5e1; font-size: 16px; max-width: 600px; margin: 0 auto;">
+        Todos os prompts foram <strong>analisados criticamente</strong> e <strong>testados em ambientes reais</strong>.<br>
+        Eles funcionam com versões gratuitas e oferecem <strong>resultados comparáveis aos planos Plus</strong>.
+      </p>
+      <p style="margin-top: 20px;">
+        <a href="index.html" class="btn destaque-btn">Voltar ao Início</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+
+  <script>
+    function copiarPrompt(id) {
+      const textarea = document.getElementById(id);
+      textarea.select();
+      textarea.setSelectionRange(0, 99999); // para mobile
+      document.execCommand("copy");
+      alert("✅ Prompt copiado com sucesso!");
+    }
+  </script>  
+
+<footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+  <script>
+    function copiarPrompt(id) {
+      const textarea = document.getElementById(id);
+      textarea.select();
+      textarea.setSelectionRange(0, 99999); // suporte mobile
+      document.execCommand("copy");
+  
+      const toast = document.getElementById("toast");
+      toast.classList.add("show");
+  
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2500);
+    }
+  </script>
+  
+  <!-- ALERTA TOAST BONITO -->
+<div id="toast" class="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-text">Prompt copiado com sucesso!</span>
+  </div>
+  
+  <script>
+    function copiarPrompt(id) {
+      const textarea = document.getElementById(id);
+      textarea.select();
+      textarea.setSelectionRange(0, 99999); // suporte mobile
+      document.execCommand("copy");
+  
+      const toast = document.getElementById("toast");
+      toast.classList.add("show");
+  
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2500);
+    }
+  </script>  
+  <script>
+    function alternarModo() {
+      const body = document.body;
+      const botao = document.querySelector('.toggle-mode');
+  
+      body.classList.toggle('light-mode');
+  
+      if (body.classList.contains('light-mode')) {
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+        localStorage.setItem('modoEduVerso', 'claro');
+      } else {
+        botao.innerHTML = '<i class="fas fa-moon"></i> Modo Escuro';
+        localStorage.setItem('modoEduVerso', 'escuro');
+      }
+    }
+  
+    // Aplicar o modo salvo ao carregar
+    window.addEventListener('DOMContentLoaded', () => {
+      const modoSalvo = localStorage.getItem('modoEduVerso');
+      const botao = document.querySelector('.toggle-mode');
+  
+      if (modoSalvo === 'claro') {
+        document.body.classList.add('light-mode');
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+      }
+    });
+  </script>
+  
+</body>
+<button class="toggle-mode" onclick="alternarModo()">
+  <i class="fas fa-moon"></i> Modo Escuro
+</button>
+
+</html>

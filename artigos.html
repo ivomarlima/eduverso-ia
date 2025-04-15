@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artigos - EduVerso IA</title>
+  <link rel="stylesheet" href="estilos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" style="width: 100%; height: auto;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="favoritos.html"><i class="fas fa-star"></i> Favoritos</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Todos os Artigos</h2>
+      <div style="text-align: center; margin: 30px 0;">
+        <input type="text" id="campoBusca" placeholder="Buscar artigo por palavra-chave..." style="
+          padding: 12px;
+          width: 90%;
+          max-width: 500px;
+          font-size: 16px;
+          border-radius: 8px;
+          border: 1px solid #334155;
+          background-color: #1e293b;
+          color: #f8fafc;
+        ">
+      </div>
+
+      <div id="filtros" class="filtro-categorias" style="text-align: center; margin-bottom: 30px;">
+        <button class="btn-filtro ativo" data-categoria="todos">Todos</button>
+        <button class="btn-filtro" data-categoria="IA na Educação">IA na Educação</button>
+        <button class="btn-filtro" data-categoria="Matemática Criativa">Matemática Criativa</button>
+        <button class="btn-filtro" data-categoria="Técnicas de Estudo">Técnicas de Estudo</button>
+        <button class="btn-filtro" data-categoria="Educação Inclusiva">Educação Inclusiva</button>
+        <button class="btn-filtro" data-categoria="Gamificação">Gamificação</button>
+        <button class="btn-filtro" data-categoria="Tecnologias Educacionais">Tecnologias Educacionais</button>
+        <button class="btn-filtro" data-categoria="Ferramentas de IA">Ferramentas de IA</button>
+        <button class="btn-filtro" data-categoria="Fundamentos da Educação">Fundamentos da Educação</button>
+        <button class="btn-filtro" data-categoria="Matemática Visual">Matemática Visual</button>
+      </div>
+
+      <div id="artigos-dinamicos" class="card-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+
+  <!-- Botão modo claro/escuro -->
+  <button class="toggle-mode" onclick="alternarModo()">
+    <i class="fas fa-moon"></i> Modo Escuro
+  </button>
+
+  <!-- Script de funcionalidade -->
+  <script>
+    const container = document.getElementById('artigos-dinamicos');
+    const campoBusca = document.getElementById('campoBusca');
+    let todosArtigos = [];
+
+    fetch('artigos.json')
+      .then(res => res.json())
+      .then(artigos => {
+        todosArtigos = artigos;
+        renderizarArtigos('todos', '');
+      });
+
+    function renderizarArtigos(categoria, busca = '') {
+      container.innerHTML = '';
+      const favoritos = JSON.parse(localStorage.getItem('favoritosEduVerso')) || [];
+      const lidos = JSON.parse(localStorage.getItem('artigosLidos')) || [];
+
+      const filtrados = todosArtigos.filter(art => {
+        const correspondeCategoria = categoria === 'todos' || art.categoria === categoria;
+        const correspondeBusca = art.titulo.toLowerCase().includes(busca.toLowerCase()) ||
+                                 art.resumo.toLowerCase().includes(busca.toLowerCase());
+        return correspondeCategoria && correspondeBusca;
+      });
+
+      if (filtrados.length === 0) {
+        container.innerHTML = '<p style="color: #ccc; text-align: center;">Nenhum artigo encontrado.</p>';
+        return;
+      }
+
+      filtrados.forEach(art => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        if (lidos.includes(art.titulo)) card.classList.add('lido');
+
+        const idEstrela = `fav-${encodeURIComponent(art.titulo)}`;
+
+        card.innerHTML = `
+          <div class="favorito" onclick="alternarFavorito('${art.titulo}')">
+            <i class="fas fa-star" id="${idEstrela}"></i>
+          </div>
+          <img src="${art.imagem}" alt="${art.titulo}">
+          <h3>${art.titulo}</h3>
+          <p>${art.resumo}</p>
+          <a href="${art.url}" class="btn">Leia mais</a>
+          <button class="marcar-btn" onclick="marcarComoLido('${art.titulo}', this)">✔️ Marcar como lido</button>
+        `;
+
+        if (favoritos.includes(art.titulo)) {
+          const estrela = card.querySelector('i');
+          estrela.classList.add('favoritado');
+        }
+
+        container.appendChild(card);
+      });
+    }
+
+    function alternarFavorito(titulo) {
+      const id = `fav-${encodeURIComponent(titulo)}`;
+      const estrela = document.getElementById(id);
+      let favoritos = JSON.parse(localStorage.getItem('favoritosEduVerso')) || [];
+
+      if (favoritos.includes(titulo)) {
+        favoritos = favoritos.filter(fav => fav !== titulo);
+        estrela.classList.remove('favoritado');
+      } else {
+        favoritos.push(titulo);
+        estrela.classList.add('favoritado');
+      }
+
+      localStorage.setItem('favoritosEduVerso', JSON.stringify(favoritos));
+    }
+
+    function marcarComoLido(titulo, botao) {
+      let lidos = JSON.parse(localStorage.getItem('artigosLidos')) || [];
+      if (!lidos.includes(titulo)) {
+        lidos.push(titulo);
+        localStorage.setItem('artigosLidos', JSON.stringify(lidos));
+        botao.parentElement.classList.add('lido');
+        botao.textContent = "✔️ Já lido";
+        botao.disabled = true;
+      }
+    }
+
+    document.querySelectorAll('.btn-filtro').forEach(botao => {
+      botao.addEventListener('click', () => {
+        document.querySelectorAll('.btn-filtro').forEach(btn => btn.classList.remove('ativo'));
+        botao.classList.add('ativo');
+        const categoria = botao.dataset.categoria;
+        const busca = campoBusca.value.trim();
+        renderizarArtigos(categoria, busca);
+      });
+    });
+
+    campoBusca.addEventListener('input', () => {
+      const categoriaAtual = document.querySelector('.btn-filtro.ativo').dataset.categoria;
+      const textoBusca = campoBusca.value.trim();
+      renderizarArtigos(categoriaAtual, textoBusca);
+    });
+
+    // Ativar modo salvo
+    window.addEventListener('DOMContentLoaded', () => {
+      const modoSalvo = localStorage.getItem('modoEduVerso');
+      const botao = document.querySelector('.toggle-mode');
+      if (modoSalvo === 'claro') {
+        document.body.classList.add('light-mode');
+        if (botao) {
+          botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+        }
+      }
+    });
+
+    function alternarModo() {
+      const body = document.body;
+      const botao = document.querySelector('.toggle-mode');
+
+      body.classList.toggle('light-mode');
+
+      if (body.classList.contains('light-mode')) {
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+        localStorage.setItem('modoEduVerso', 'claro');
+      } else {
+        botao.innerHTML = '<i class="fas fa-moon"></i> Modo Escuro';
+        localStorage.setItem('modoEduVerso', 'escuro');
+      }
+    }
+  </script>
+
+  <!-- Estilos locais para estrelas e botão modo -->
+  <style>
+    .favorito {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .favorito i {
+      font-size: 20px;
+      color: #94a3b8;
+      transition: color 0.3s ease;
+    }
+    .favorito i.favoritado {
+      color: #facc15;
+    }
+    .card {
+      position: relative;
+    }
+    .card.lido {
+      opacity: 0.85;
+      border: 2px solid #10b981;
+    }
+    .marcar-btn {
+      margin: 10px 15px 15px;
+      background-color: #10b981;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+    .marcar-btn:hover {
+      background-color: #059669;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #06b6d4;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .toggle-mode:hover {
+      background: #0ea5e9;
+    }
+
+    body.light-mode {
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    body.light-mode .card,
+    body.light-mode section,
+    body.light-mode nav,
+    body.light-mode footer {
+      background-color: #ffffff !important;
+      color: #0f172a !important;
+    }
+
+    body.light-mode h2,
+    body.light-mode h3 {
+      color: #1e3a8a;
+    }
+  </style>
+</body>
+</html>

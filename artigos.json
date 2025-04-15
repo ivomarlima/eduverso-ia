@@ -1,0 +1,30 @@
+[
+  {
+    "titulo": "Aprendizado Imersivo com IA",
+    "imagem": "imagens/aprendizado-imersivo.jpg",
+    "resumo": "Veja como a IA pode transformar seu aprendizado em uma experiência imersiva.",
+    "url": "artigo1.html",
+    "categoria": "IA na Educação"
+  },
+  {
+    "titulo": "Flashcards com ChatGPT",
+    "imagem": "imagens/chatgpt-flashcards.jpg",
+    "resumo": "Crie flashcards inteligentes com prompts otimizados.",
+    "url": "artigo2.html",
+    "categoria": "Técnicas de Estudo"
+  },
+  {
+    "titulo": "Entendendo frações com histórias",
+    "imagem": "imagens/fracoes-historias.jpg",
+    "resumo": "Use narrativas criativas para ensinar frações de forma leve e divertida.",
+    "url": "artigo3.html",
+    "categoria": "Matemática Criativa"
+  },
+  {
+    "titulo": "Como estudar melhor com IA gratuita",
+    "imagem": "imagens/estudo-ia.jpg",
+    "resumo": "Use ferramentas gratuitas como ChatGPT Free para estudar com eficiência.",
+    "url": "artigo4.html",
+    "categoria": "Técnicas de Estudo"
+  }
+]

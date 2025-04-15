@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerso IA</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+
+<body>
+  <header>
+    <header>
+      <img src="imagens/banner.png" alt="Banner com o texto 'EduVerso IA – Explore, aprenda e transforme seu conhecimento com Inteligência Artificial'" style="width: 100%; height: auto;">
+      <h1 style="display: none;">EduVerso IA</h1>
+      <p style="display: none;">Explore, aprenda e transforme seu conhecimento com Inteligência Artificial</p>
+    </header>
+    
+
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+        <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+        <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+        <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+        <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+        <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+        <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+        <li><a href="favoritos.html"><i class="fas fa-star"></i> Favoritos</a></li>
+        <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+      </ul>
+    </nav>
+  
+
+  <main>
+    <section>
+      <h2>Bem-vindo ao EduVerso IA</h2>
+      <p>Este é um blog educacional onde você descobre como aprender com apoio da Inteligência Artificial.</p>
+    </section>
+
+    <section class="destaque">
+      <div class="destaque-imagem">
+        <img src="imagens/aprendizado-imersivo.jpg" alt="Estudante explorando uma interface imersiva de aprendizagem com IA">
+      </div>
+      <div class="destaque-conteudo">
+        <h2>Destaque da Semana</h2>
+        <h3>Aprendizado Imersivo: A Nova Era da Educação com IA</h3>
+        <p>Imagine aprender História dentro de um museu virtual, Matemática resolvendo problemas com avatares, ou Química vendo moléculas ganharem forma diante dos seus olhos. A inteligência artificial está criando experiências que rompem a barreira do papel e da tela.</p>
+        <a href="artigo1.html" class="btn destaque-btn">Leia agora</a>
+
+      </div>
+    </section>
+    
+    
+    <section>
+      <h2>Últimos Artigos</h2>
+      <div class="card-container">
+    
+    
+        <!-- Card 2 -->
+<div class="card">
+  <img src="imagens/chatgpt-flashcards.jpg" alt="Celular com o logo do ChatGPT e flashcards amarelos">
+  <h3>Flashcards com ChatGPT</h3>
+  <p>Veja como criar flashcards personalizados com IA e turbinar sua memorização para concursos.</p>
+  <a href="artigo2.html" class="btn">Leia mais</a>
+
+</div>
+
+    
+       <!-- Card 3 -->
+<div class="card">
+  <img src="imagens/fracoes-historias.jpg" alt="Mesa com livro aberto mostrando pizza dividida em frações">
+  <h3>Entendendo frações com histórias</h3>
+  <p>Use narrativas criativas para ensinar frações de maneira leve, divertida e eficaz.</p>
+  <a href="artigo3.html" class="btn">Leia mais</a>
+
+</div>
+
+    
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+  <script>
+    function alternarModo() {
+      const body = document.body;
+      const botao = document.querySelector('.toggle-mode');
+  
+      body.classList.toggle('light-mode');
+  
+      if (body.classList.contains('light-mode')) {
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+        localStorage.setItem('modoEduVerso', 'claro');
+      } else {
+        botao.innerHTML = '<i class="fas fa-moon"></i> Modo Escuro';
+        localStorage.setItem('modoEduVerso', 'escuro');
+      }
+    }
+  
+    // Aplicar o modo salvo ao carregar
+    window.addEventListener('DOMContentLoaded', () => {
+      const modoSalvo = localStorage.getItem('modoEduVerso');
+      const botao = document.querySelector('.toggle-mode');
+  
+      if (modoSalvo === 'claro') {
+        document.body.classList.add('light-mode');
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+      }
+    });
+  </script>
+  
+</body>
+<button class="toggle-mode" onclick="alternarModo()">
+  <i class="fas fa-moon"></i> Modo Escuro
+</button>
+
+</html>
