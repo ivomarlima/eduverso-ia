@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -76,3 +77,109 @@
 </button>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriais - EduVerso IA</title>
+  <meta name="description" content="Tutoriais passo a passo com Inteligência Artificial para estudos, ferramentas educacionais e produtividade.">
+  <link rel="canonical" href="https://www.eduversoia.com.br/tutoriais.html">
+  <meta name="theme-color" content="#6366f1">
+
+  <!-- Fontes e Estilos -->
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" style="width: 100%; height: auto;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="ativo"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+      <li>
+        <a href="servicos-latex.html">
+          <i class="fas fa-file-code"></i>
+          Serviços&nbsp;
+          <span style="font-family: 'Computer Modern', serif; font-variant: small-caps; letter-spacing: -1px;">
+            La<span style="font-size: 0.85em;">T<span style="vertical-align: 0.15em; font-size: 0.75em;">E</span>X</span>
+          </span>
+        </a>
+      </li>
+      <li><a href="ajude.html" class="btn-ajude" aria-label="Ajude o Projeto">💖 Ajude o Projeto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section style="padding: 40px 20px; text-align: center; max-width: 800px; margin: auto;">
+      <h2><i class="fas fa-tools"></i> 🛠️ Tutoriais EduVerso IA</h2>
+
+      <p style="text-align: justify; margin-top: 20px; font-size: 1.1em;">
+        Em breve você encontrará aqui uma coleção de tutoriais passo a passo para explorar ferramentas digitais, técnicas de estudo inteligente e práticas inovadoras com Inteligência Artificial aplicadas à educação e ao desenvolvimento pessoal.
+      </p>
+
+      <p style="text-align: justify; margin-top: 20px; font-size: 1.1em;">
+        Estamos desenvolvendo conteúdos práticos, fáceis de seguir e repletos de dicas para que você possa aproveitar todo o potencial das novas tecnologias no seu aprendizado. Volte em breve! 💙
+      </p>
+
+      <a href="index.html" class="btn destaque-btn" style="margin-top: 30px;">⬅️ Voltar ao Início</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-icon"><i class="fas fa-brain"></i></div>
+    <div>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</div>
+  </footer>
+
+  <!-- Botão Modo ABNT -->
+  <button class="toggle-abnt" onclick="alternarModoABNT()" aria-label="Alternar Modo ABNT">
+    📚 Modo ABNT
+  </button>
+
+  <!-- Botão Topo -->
+  <button id="topo" class="botao-topo" onclick="voltarTopo()" aria-label="Voltar ao topo">
+    Topo
+  </button>
+
+  <!-- Script Modo ABNT com persistência -->
+  <script>
+    const root = document.body;
+    const STORAGE_KEY = 'eduverso-abnt';
+
+    function alternarModoABNT() {
+      root.classList.toggle('modo-abnt');
+      localStorage.setItem(STORAGE_KEY, root.classList.contains('modo-abnt'));
+    }
+
+    if (localStorage.getItem(STORAGE_KEY) === 'true') {
+      root.classList.add('modo-abnt');
+    }
+  </script>
+
+  <!-- Script Botão Topo -->
+  <script>
+    function voltarTopo() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const botaoTopo = document.getElementById('topo');
+      botaoTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+  </script>
+
+</body>
+</html>
+>>>>>>> a9289e1 ([Add] Novos cards de artigos na home | [Refactor] Estrutura dos cards na index.html | [Style] Ajustes visuais e responsivos | [Docs] Atualização de textos e referências do artigo5)

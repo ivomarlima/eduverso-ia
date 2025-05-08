@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -78,3 +79,154 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Blog – EduVerso IA</title>
+  <meta name="description" content="Inspire-se com relatos, dicas e reflexões sobre Inteligência Artificial na educação, escritos por Ivomar Lima.">
+  <link rel="canonical" href="https://www.eduversoia.com.br/blog.html">
+
+  <!-- Cor da barra do navegador em mobile -->
+  <meta name="theme-color" content="#6366f1">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos principais -->
+  <link rel="stylesheet" href="estilos.css" />
+
+  <!-- Ícones Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- Botão de Voltar ao Topo -->
+<button id="topo" class="botao-topo" onclick="voltarTopo()" aria-label="Voltar ao topo">
+  <i class="fas fa-arrow-up"></i> Topo
+</button>
+
+<script>
+  function voltarTopo() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.addEventListener('scroll', () => {
+    const botaoTopo = document.getElementById('topo');
+    if (window.scrollY > 300) {
+      botaoTopo.style.display = 'block';
+    } else {
+      botaoTopo.style.display = 'none';
+    }
+  });
+</script>
+
+
+<body>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" loading="lazy" style="width:100%;height:auto;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="ativo"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
+      <li>
+        <a href="servicos-latex.html">
+          <i class="fas fa-file-code"></i>
+          Serviços&nbsp;
+          <span style="font-family: 'Computer Modern', serif; font-variant: small-caps; letter-spacing: -1px;">
+            La<span style="font-size: 0.85em;">T<span style="vertical-align: 0.15em; font-size: 0.75em;">E</span>X</span>
+          </span>
+        </a>
+      </li>
+      <li><a href="ajude.html" class="btn-ajude" aria-label="Ajude o Projeto">💖 Ajude o Projeto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>📝 Postagens Pessoais</h2>
+      <p class="intro-blog" style="max-width:700px;margin:0 auto 30px;font-size:18px;">
+        Este é o espaço onde compartilho ideias, experiências e reflexões sobre a revolução da Inteligência Artificial.&nbsp;
+        Aqui, a tecnologia encontra o coração humano.
+      </p>
+
+      <!-- container padronizado -->
+      <div class="card-container">
+
+        <!-- POST 1 -->
+        <div class="card">
+          <img src="imagens/post1-inteligencia-artificial.png"
+               alt="Capa do post: Não tenha medo da Inteligência Artificial" loading="lazy">
+          <h3>Não Tenha Medo da Inteligência Artificial</h3>
+          <p>A tecnologia que assusta também pode libertar. Descubra como a IA se torna aliada poderosa para quem ensina e aprende.</p>
+          <a href="post1.html" class="btn">Leia mais</a>
+        </div>
+
+        <!-- POST 2 -->
+        <div class="card">
+          <img src="imagens/post2-revolucao-ia.png"
+               alt="Capa do post: 5 motivos para começar a usar IA agora mesmo" loading="lazy">
+          <h3>5 Motivos Para Começar a Usar IA Agora Mesmo</h3>
+          <p>Entenda por que a Inteligência Artificial pode ser sua maior aliada no trabalho, nos estudos e no dia a dia.</p>
+          <a href="post2.html" class="btn">Leia mais</a>
+        </div>
+
+        <!-- POST 3 -->
+        <div class="card">
+          <img src="imagens/post3-site-com-ia.png"
+               alt="Capa do post: Como criei meu site com ajuda da IA" loading="lazy">
+          <h3>Como Criei Meu Site com Ajuda da IA</h3>
+          <p>Um relato real de superação, aprendizado e inspiração para quem acha que não pode começar com tecnologia.</p>
+          <a href="post3.html" class="btn">Leia mais</a>
+        </div>
+
+      </div><!-- /.card-container -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-icon">
+      <i class="fas fa-brain"></i>
+    </div>
+    <div>
+      &copy; 2025 EduVerso IA&nbsp;|&nbsp;Criado por Ivomar Lima
+    </div>
+  </footer>
+
+  <!-- Botão modo ABNT -->
+  <button class="toggle-abnt" onclick="alternarModoABNT()" aria-label="Alternar Modo ABNT">
+    📚 Modo ABNT
+  </button>
+
+  <!-- Script com persistência -->
+  <script>
+    const root = document.body;
+    const STORAGE_KEY = 'eduverso-abnt';
+
+    function alternarModoABNT(){
+      root.classList.toggle('modo-abnt');
+      localStorage.setItem(STORAGE_KEY, root.classList.contains('modo-abnt'));
+    }
+    // aplica preferência salva
+    if(localStorage.getItem(STORAGE_KEY)==='true'){
+      root.classList.add('modo-abnt');
+    }
+  </script>
+
+</body>
+</html>
+>>>>>>> a9289e1 ([Add] Novos cards de artigos na home | [Refactor] Estrutura dos cards na index.html | [Style] Ajustes visuais e responsivos | [Docs] Atualização de textos e referências do artigo5)

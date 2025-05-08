@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajude o Projeto - EduVerso IA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <a href="#conteudo" class="pular-conteudo" aria-label="Ir direto para o conteúdo principal">📌 Ir direto para o conteúdo</a>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" style="width: 100%; height: auto;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="ativo"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+      <li>
+        <a href="servicos-latex.html">
+          <i class="fas fa-file-code"></i>
+          Serviços&nbsp;
+          <span style="font-family: 'Computer Modern', serif; font-variant: small-caps; letter-spacing: -1px;">
+            La<span style="font-size: 0.85em;">T<span style="vertical-align: 0.15em; font-size: 0.75em;">E</span>X</span>
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <main id="conteudo">
+    <section>
+      <h2><i class="fas fa-hands-helping"></i> Ajude o EduVerso IA a continuar existindo</h2>
+      <p style="font-size: 18px; max-width: 700px; margin: auto;">
+        O <strong>EduVerso IA</strong> é um projeto 100% independente e feito com muito carinho para democratizar o uso da Inteligência Artificial na educação. 
+        Se você gosta do conteúdo, considere apoiar — <strong>qualquer ajuda faz a diferença!</strong>
+      </p>
+    </section>
+
+    <section>
+      <h3><i class="fas fa-heart"></i> Por que apoiar?</h3>
+      <ul>
+        <li>✅ Mantém o site gratuito, acessível e atualizado</li>
+        <li>✅ Permite a criação de novos conteúdos, e-books e agentes de IA</li>
+        <li>✅ Apoia diretamente um educador e criador independente</li>
+        <li>✅ Fortalece uma comunidade educativa do bem</li>
+      </ul>
+    </section>
+
+    <section class="fundo-azul" style="text-align: center;">
+      <h3><i class="fas fa-hands-holding"></i> Como você pode ajudar?</h3>
+    </section>
+
+    <section style="display: grid; gap: 20px; grid-template-columns: 1fr 1fr; max-width: 800px; margin: 30px auto;">
+      <!-- Compartilhar -->
+      <div class="card">
+        <h4><i class="fas fa-share-alt"></i> Compartilhe</h4>
+        <p>Divulgue o EduVerso IA para amigos, professores e estudantes.</p>
+      </div>
+
+      <!-- Avaliar -->
+      <div class="card">
+        <h4><i class="fas fa-star"></i> Deixe um elogio</h4>
+        <p>Use a hashtag <code>#EduVersoIA</code> nas redes ou envie seu depoimento via WhatsApp.</p>
+      </div>
+
+      <!-- Doação Pix -->
+      <div class="card">
+        <h4><i class="fas fa-coffee"></i> Compre um café (Pix)</h4>
+        <p style="font-size: 16px; margin-bottom: 10px;">
+            <strong>Chave Pix:</strong><br>
+            <span style="word-break: break-all;">limaivomar@gmail.com</span>Qualquer valor ajuda 🙏</small>
+          </p>
+          
+      </div>
+
+      <!-- Comprar premium -->
+      <div class="card">
+        <h4><i class="fas fa-magic"></i> Compre um agente premium</h4>
+        <p>A partir de R$4,90 você desbloqueia recursos incríveis e ainda apoia o projeto.<br><a href="loja.html">👉 Ver loja</a></p>
+      </div>
+    </section>
+
+    <section style="text-align: center; margin-top: 40px;">
+      <blockquote style="font-size: 18px; color: #6366f1; font-style: italic;">
+        "O apoio de uma única pessoa já faz toda a diferença. Você me ajuda a continuar sonhando alto."
+      </blockquote>
+      <p class="assinatura-autor"><i class="fas fa-feather-alt"></i> Ivomar Lima, criador do EduVerso IA</p>
+
+
+      <a href="index.html" class="btn destaque-btn" style="margin-top: 30px;">
+        ⬅️ Voltar ao Início
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+
+  <button class="toggle-abnt" onclick="alternarModoABNT()">📚 Modo ABNT</button>
+  <button id="topo" class="botao-topo" onclick="voltarTopo()" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i> Topo
+  </button>
+
+  <script>
+    function alternarModoABNT() {
+      document.body.classList.toggle('modo-abnt');
+      localStorage.setItem('eduverso-abnt', document.body.classList.contains('modo-abnt'));
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('eduverso-abnt') === 'true') {
+        document.body.classList.add('modo-abnt');
+      }
+    });
+
+    function voltarTopo() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const botaoTopo = document.getElementById('topo');
+      botaoTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>

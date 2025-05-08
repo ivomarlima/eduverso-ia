@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agente Currículo Impecável – EduVerso IA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <a href="#conteudo" class="pular-conteudo" aria-label="Ir direto para o conteúdo principal">📌 Ir direto para o conteúdo</a>
+
+  <header>
+    <h1><i class="fas fa-id-card-alt"></i> Agente Currículo Impecável</h1>
+    <p style="text-align: center; font-size: 18px; color: inherit; max-width: 700px; margin: 10px auto;">
+      Seu currículo pronto para impressionar. IA como sua mentora de carreira, em cada detalhe.
+    </p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="ativo"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+      <li>
+        <a href="servicos-latex.html">
+          <i class="fas fa-file-code"></i>
+          Serviços&nbsp;
+          <span style="font-family: 'Computer Modern', serif; font-variant: small-caps; letter-spacing: -1px;">
+            La<span style="font-size: 0.85em;">T<span style="vertical-align: 0.15em; font-size: 0.75em;">E</span>X</span>
+          </span>
+        </a>
+      </li>
+      <li><a href="ajude.html" class="btn-ajude" aria-label="Ajude o Projeto">💖 Ajude o Projeto</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo">
+    <section>
+      <h2><i class="fas fa-briefcase"></i> Perfeito para:</h2>
+      <ul>
+        <li>✔️ Quem está buscando emprego e quer se destacar;</li>
+        <li>✔️ Quem deseja melhorar o perfil no LinkedIn;</li>
+        <li>✔️ Quem vai participar de entrevistas ou processos seletivos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-magic"></i> O que esse agente faz?</h2>
+      <p>Cria descrições profissionais personalizadas, simula perguntas de entrevistas, sugere pontos fortes e adapta seu currículo para a vaga desejada — tudo com a precisão de uma IA treinada para te ajudar a brilhar.</p>
+    </section>
+
+    <section class="fundo-azul" style="text-align: center;">
+      <h2><i class="fas fa-unlock-alt"></i> Ative agora</h2>
+      <p style="font-size: 18px;">Por apenas <strong>R$4,90</strong>, tenha uma consultoria de carreira inteira na palma da sua mão.</p>
+      <a class="btn" href="https://wa.me/5581983794523?text=Olá!%20Quero%20comprar%20o%20Agente%20Currículo%20Impecável%20por%20R$4,90">
+        📲 Quero esse agente agora
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+
+  <button class="toggle-abnt" onclick="alternarModoABNT()">📚 Modo ABNT</button>
+
+  <script>
+    function alternarModoABNT() {
+      const body = document.body;
+      body.classList.toggle('modo-abnt');
+    }
+
+    function voltarTopo() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const botaoTopo = document.getElementById('topo');
+      if (window.scrollY > 300) {
+        botaoTopo.style.display = 'block';
+      } else {
+        botaoTopo.style.display = 'none';
+      }
+    });
+  </script>
+
+  <button id="topo" class="botao-topo" onclick="voltarTopo()" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i> Topo
+  </button>
+</body>
+</html>

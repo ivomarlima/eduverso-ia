@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços LaTeX – EduVerso IA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <a href="#conteudo" class="pular-conteudo">📌 Ir direto para o conteúdo</a>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" style="width: 100%; height: auto;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="ativo"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+      <li><a href="ajude.html" class="btn-ajude" aria-label="Ajude o Projeto">💖 Ajude o Projeto</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo">
+    <section>
+      <h2><i class="fas fa-file-code"></i> Serviços Personalizados em LaTeX</h2>
+      <p style="font-size: 18px; text-align: justify;">
+        Transforme seus trabalhos acadêmicos, relatórios técnicos ou materiais didáticos em documentos profissionais de altíssimo padrão. 
+        Utilizando o poder do LaTeX, o EduVerso IA entrega elegância, estrutura e organização em cada detalhe.
+      </p>
+    </section>
+
+    <section style="background: #1e293b; border-radius: 12px; padding: 30px; margin-bottom: 40px;">
+      <h3><i class="fas fa-wand-magic-sparkles"></i> O que você pode solicitar:</h3>
+      <ul style="font-size: 1.1em; color: #cbd5e1;">
+        <li>📘 Formatação de TCCs, dissertações e teses</li>
+        <li>🧠 Produção de e-books e apostilas educacionais</li>
+        <li>📊 Apresentações em Beamer (slides LaTeX)</li>
+        <li>📎 Criação de templates e modelos personalizados</li>
+        <li>📄 Conversão de documentos do Word para LaTeX</li>
+        <li>🧾 Organização de fórmulas, listas, figuras e referências</li>
+      </ul>
+    </section>
+
+    <p style="background: #fde68a; color: #92400e; padding: 12px 20px; border-radius: 8px; text-align: center; margin-bottom: 30px;">
+      <strong>⚠️ Agendamento necessário:</strong> pedidos de LaTeX devem ser feitos com antecedência mínima de 7 dias úteis.
+    </p>
+
+    <section style="background: #fef3c7; padding: 30px; border-left: 6px solid #f59e0b; border-radius: 12px;">
+      <h3 style="color: #92400e; margin-bottom: 15px;"><i class="fas fa-hourglass-half"></i> Importante sobre os prazos</h3>
+      <p style="color: #78350f; font-size: 1.1em; line-height: 1.7; text-align: justify;">
+        Os serviços de LaTeX oferecidos aqui são realizados com muito cuidado, revisão minuciosa e dedicação exclusiva. 
+        <br><br>
+        Por isso, <strong>não é possível atender pedidos com prazos urgentes</strong>. Estamos com equipe reduzida e trabalhamos com agendamentos. 
+        <br><br>
+        <strong>Encomende com antecedência</strong> para garantir um resultado de excelência, feito sob medida para seu projeto acadêmico ou profissional. 
+        Sua organização será recompensada com um material impecável e no prazo combinado.
+      </p>
+    </section>
+
+    <section style="text-align: center; margin-top: 40px;">
+      <p style="font-size: 18px;">Deseja fazer um orçamento ou tirar dúvidas?</p>
+      <a href="https://wa.me/5581983794523?text=Olá!%20Quero%20encomendar%20um%20serviço%20LaTeX." 
+         class="btn destaque-btn" 
+         style="margin-top: 10px; display: inline-block;">
+        💬 Fale comigo no WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</p>
+  </footer>
+
+  <button class="toggle-abnt" onclick="alternarModoABNT()">📚 Modo ABNT</button>
+
+  <script>
+    function alternarModoABNT() {
+      document.body.classList.toggle('modo-abnt');
+      localStorage.setItem('eduverso-abnt', document.body.classList.contains('modo-abnt'));
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('eduverso-abnt') === 'true') {
+        document.body.classList.add('modo-abnt');
+      }
+    });
+  </script>
+</body>
+</html>

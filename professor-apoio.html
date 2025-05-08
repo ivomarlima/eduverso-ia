@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agente Professor de Apoio - EduVerso IA</title>
+  <meta name="description" content="Conheça o Agente Professor de Apoio do EduVerso IA: crie planos de aula, atividades, resumos e materiais didáticos alinhados à BNCC.">
+  
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Acessibilidade: Ir direto para o conteúdo -->
+  <a href="#conteudo" class="pular-conteudo" aria-label="Ir direto para o conteúdo principal">📌 Ir direto para o conteúdo</a>
+
+  <header>
+    <h1><i class="fas fa-chalkboard-teacher"></i> Agente Professor de Apoio</h1>
+    <p style="text-align: center; font-size: 18px;">Um assistente inteligente que cria conteúdos pedagógicos sob medida para você.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="ativo"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+      <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+      <li>
+        <a href="servicos-latex.html">
+          <i class="fas fa-file-code"></i>
+          Serviços&nbsp;
+          <span style="font-family: 'Computer Modern', serif; font-variant: small-caps; letter-spacing: -1px;">
+            La<span style="font-size: 0.85em;">T<span style="vertical-align: 0.15em; font-size: 0.75em;">E</span>X</span>
+          </span>
+        </a>
+      </li>
+      <li><a href="ajude.html" class="btn-ajude" aria-label="Ajude o Projeto">💖 Ajude o Projeto</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo">
+    <section>
+      <h2><i class="fas fa-users"></i> Feito para quem?</h2>
+      <ul>
+        <li>✔️ Professores da Educação Básica que desejam inovar suas aulas;</li>
+        <li>✔️ Estudantes de licenciatura que precisam de apoio para planejamentos e atividades;</li>
+        <li>✔️ Produtores de conteúdo didático que buscam agilidade e qualidade na criação de materiais.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-lightbulb"></i> O que este agente faz?</h2>
+      <p>Gera planos de aula completos, atividades interativas, listas de exercícios, propostas de projetos, resumos e muito mais — tudo alinhado às habilidades da BNCC.</p>
+      <p>Basta digitar o assunto ou habilidade desejada. O Agente Professor de Apoio entrega o material pronto para ser utilizado, com qualidade e criatividade.</p>
+    </section>
+
+    <section class="fundo-azul" style="text-align: center;">
+      <h2><i class="fas fa-unlock-alt"></i> Como acessar?</h2>
+      <p>Desbloqueie o acesso completo ao Agente Professor de Apoio por apenas:</p>
+      <h3 style="color: #facc15; font-size: 26px;">R$4,90</h3>
+      <p style="color: #94a3b8;">Pagamento único. Acesso vitalício.</p>
+
+      <a class="btn destaque-btn"
+         href="https://wa.me/5581983794523?text=Olá!%20Quero%20comprar%20o%20Agente%20Professor%20de%20Apoio%20por%20R$4,90">
+        📲 Quero desbloquear agora
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-icon">
+      <i class="fas fa-brain"></i>
+    </div>
+    <div>
+      &copy; 2025 EduVerso IA | Criado por Ivomar Lima
+    </div>
+  </footer>
+
+  <!-- Botão Modo ABNT -->
+  <button class="toggle-abnt" onclick="alternarModoABNT()" aria-label="Alternar Modo ABNT">
+    📚 Modo ABNT
+  </button>
+
+  <!-- Script do Modo ABNT com persistência -->
+  <script>
+    const root = document.body;
+    const STORAGE_KEY = 'eduverso-abnt';
+
+    function alternarModoABNT() {
+      root.classList.toggle('modo-abnt');
+      localStorage.setItem(STORAGE_KEY, root.classList.contains('modo-abnt'));
+    }
+
+    // Aplica preferência salva
+    if (localStorage.getItem(STORAGE_KEY) === 'true') {
+      root.classList.add('modo-abnt');
+    }
+  </script>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="topo" class="botao-topo" onclick="voltarTopo()" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i> Topo
+  </button>
+
+  <script>
+    function voltarTopo() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const botaoTopo = document.getElementById('topo');
+      if (window.scrollY > 300) {
+        botaoTopo.style.display = 'block';
+      } else {
+        botaoTopo.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

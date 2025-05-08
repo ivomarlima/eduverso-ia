@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -163,3 +164,163 @@
 </button>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PromptStore – EduVerso IA</title>
+  <meta name="description" content="Coleção de prompts gratuitos e otimizados para usar em ChatGPT Free, Gemini, Copilot e outros modelos de IA.">
+  <link rel="canonical" href="https://www.eduversoia.com.br/prompts.html">
+  <meta name="theme-color" content="#6366f1">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos principais -->
+  <link rel="stylesheet" href="estilos.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <img src="imagens/banner.png" alt="Banner do EduVerso IA" loading="lazy" style="width:100%;height:auto;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="ativo"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+      <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+      <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+      <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+      <li>
+        <a href="servicos-latex.html">
+          <i class="fas fa-file-code"></i>
+          Serviços&nbsp;
+          <span style="font-family: 'Computer Modern', serif; font-variant: small-caps; letter-spacing: -1px;">
+            La<span style="font-size: 0.85em;">T<span style="vertical-align: 0.15em; font-size: 0.75em;">E</span>X</span>
+          </span>
+        </a>
+      </li>
+      <li><a href="ajude.html" class="btn-ajude" aria-label="Ajude o Projeto">💖 Ajude o Projeto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section style="text-align:center;padding:60px 20px;">
+      <h2 style="color:#6366f1;font-size:32px;">✨ PromptStore EduVerso IA</h2>
+      <p style="font-size:18px;max-width:700px;margin:20px auto;">
+        Torne-se um mestre da IA mesmo usando versões gratuitas!<br>
+        Copie um de nossos prompts testados e gere <strong>respostas dignas de plano pago</strong>.
+      </p>
+      <p style="font-size:16px;">Você não precisa pagar caro por IA&nbsp;— se tiver o prompt certo.</p>
+    </section>
+
+    <section style="padding:40px 20px;">
+      <h3 style="color:#06b6d4;font-size:24px;text-align:center;margin-bottom:30px;">📂 Prompts Gratuitos</h3>
+
+      <div class="card-container">
+
+        <!-- Prompt 1 -->
+        <div class="card">
+          <img src="imagens/prompt-flashcards.jpg"
+               alt="Prompt para criar flashcards com IA"
+               loading="lazy"
+               style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-bottom:15px;">
+          <h3>Flashcards Inteligentes</h3>
+          <p>Crie cartões de memorização a partir de qualquer texto.</p>
+          <textarea id="prompt1" readonly>
+Sou estudante e quero revisar este conteúdo. Gere flashcards de perguntas e respostas em formato objetivo, com foco em memorização ativa e revisão espaçada:
+[COLE O CONTEÚDO AQUI]
+          </textarea>
+          <button class="btn copiar-btn" aria-label="Copiar Prompt Flashcards" onclick="copiarPrompt('prompt1')">📋 Copiar</button>
+        </div>
+
+        <!-- Prompt 2 -->
+        <div class="card">
+          <img src="imagens/prompt-mapa-mental.jpg"
+               alt="Prompt para criar mapas mentais com IA"
+               loading="lazy"
+               style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-bottom:15px;">
+          <h3>Mapa Mental Estruturado</h3>
+          <p>Transforme qualquer texto em um mapa mental claro.</p>
+          <textarea id="prompt2" readonly>
+Organize o conteúdo abaixo em um mapa mental com tópicos principais, subtópicos e palavras-chave. Seja claro e objetivo:
+[COLE O CONTEÚDO AQUI]
+          </textarea>
+          <button class="btn copiar-btn" aria-label="Copiar Prompt Mapa Mental" onclick="copiarPrompt('prompt2')">📋 Copiar</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section style="text-align:center;padding:30px;">
+      <p style="font-size:16px;max-width:600px;margin:0 auto;">
+        Prompts <strong>testados em ambientes reais</strong> e funcionam no ChatGPT Free, Gemini e Copilot.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-icon"><i class="fas fa-brain"></i></div>
+    <div style="text-align:center;">
+      &copy; 2025 EduVerso IA&nbsp;|&nbsp;Criado por Ivomar Lima
+    </div>
+  </footer>
+
+  <!-- Botão Modo ABNT -->
+  <button class="toggle-abnt" onclick="alternarModoABNT()" aria-label="Alternar Modo ABNT">📚 Modo ABNT</button>
+
+  <!-- Botão Topo -->
+  <button id="topo" class="botao-topo" onclick="voltarTopo()" aria-label="Voltar ao topo">Topo</button>
+
+  <!-- Toast de cópia -->
+  <div id="toast" role="status" aria-live="polite"
+       style="display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+              background:#6366f1;color:#fff;padding:12px 20px;border-radius:8px;font-weight:bold;z-index:9999;">
+    ✅ Prompt copiado!
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function copiarPrompt(id){
+      const txt = document.getElementById(id).value.trim();
+      navigator.clipboard.writeText(txt).then(()=>{
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        setTimeout(()=> toast.style.display = 'none', 2500);
+      });
+    }
+
+    function voltarTopo() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const botaoTopo = document.getElementById('topo');
+      botaoTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    const root = document.body;
+    const KEY  = 'eduverso-abnt';
+    function alternarModoABNT(){
+      root.classList.toggle('modo-abnt');
+      localStorage.setItem(KEY, root.classList.contains('modo-abnt'));
+    }
+
+    if(localStorage.getItem(KEY)==='true'){
+      root.classList.add('modo-abnt');
+    }
+  </script>
+
+</body>
+</html>
+>>>>>>> a9289e1 ([Add] Novos cards de artigos na home | [Refactor] Estrutura dos cards na index.html | [Style] Ajustes visuais e responsivos | [Docs] Atualização de textos e referências do artigo5)
