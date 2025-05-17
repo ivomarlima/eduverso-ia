@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Artigos – EduVerso IA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #38bdf8;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 40px auto;
+      font-size: 0.95em;
+      background-color: #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #334155;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    th {
+      background-color: #334155;
+      color: #facc15;
+    }
+    tr:nth-child(even) {
+      background-color: #1e293b;
+    }
+    tr:nth-child(odd) {
+      background-color: #0f172a;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .btn-download {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      background-color: #6366f1;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      width: max-content;
+    }
+  </style>
+
+  <!-- Opcional: adicione estilo para os botões -->
+<style>
+  .btn-filtro {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #334155;
+    color: #f8fafc;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-filtro:hover {
+    background-color: #6366f1;
+  }
+
+  #topo {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 60px;
+  background-color: #6366f1;
+  color: #fff;
+  border: none;
+  padding: 9px 13px;
+  border-radius: 23px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+#topo:hover {
+  background-color: #4f46e5;
+  transform: translateX(-50%) scale(1.08);
+}
+
+</style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<meta name="description" content="Saiba como identificar e usar corretamente cada tipo de artigo: científico, acadêmico, jornalístico, educacional e muito mais.">
+
+
+</head>
+<body>
+
+  <header>
+  <img src="imagens/banner.png" alt="Banner do EduVerso IA" style="width: 100%; height: auto;">
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html" class="ativo"><i class="fas fa-home"></i> Início</a></li>
+    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+    <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+    <li><a href="artigos.html"><i class="fas fa-book"></i> Artigos</a></li>
+    <li><a href="cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+    <li><a href="tutoriais.html"><i class="fas fa-tools"></i> Tutoriais</a></li>
+    <li><a href="prompts.html"><i class="fas fa-magic"></i> Prompts Prontos</a></li>
+    <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
+    <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+    <li><a href="servicos-latex.html"><i class="fas fa-file-code"></i> Serviços LaTeX</a></li>
+    <li><a href="ajude.html" class="btn-ajude" aria-label="Ajude o Projeto">❤️ Ajude o Projeto</a></li>
+  </ul>
+</nav>
+
+
+  <div class="container">
+    <h1>🧾 Tabela Comparativa dos Tipos de Artigos</h1>
+    <p style="text-align:center; max-width:800px; margin: 0 auto;">
+      Esta tabela mostra os principais tipos de artigos usados em contextos acadêmicos, jornalísticos e educacionais.
+      Você pode usá-la para decidir qual formato usar em seu projeto de escrita ou publicação.
+    </p>
+
+    <!-- Adicione isso DENTRO da <body>, logo após <div class="container"> -->
+<div class="filtros-laterais" style="margin-top: 30px; max-width: 1200px; margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <button class="btn-filtro" onclick="filtrarTabela('todos')">Todos</button>
+  <button class="btn-filtro" onclick="filtrarTabela('Acadêmico')">Acadêmico</button>
+  <button class="btn-filtro" onclick="filtrarTabela('Jornalístico')">Jornalístico</button>
+  <button class="btn-filtro" onclick="filtrarTabela('Educacional')">Educacional</button>
+</div>
+
+<section style="margin-top: 30px; font-size: 1.05em;">
+  <h2 style="text-align: center;">🔎 Como usar esta tabela?</h2>
+  <ol style="max-width: 600px; margin: 0 auto; text-align: left; padding-left: 20px;">
+    <li>Leia as descrições dos tipos de artigo</li>
+    <li>Escolha o mais adequado para seu objetivo</li>
+    <li>Clique no botão de download para salvar ou imprimir</li>
+  </ol>
+</section>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de Artigo</th>
+          <th>Descrição</th>
+          <th>Público-alvo</th>
+          <th>Exemplo Prático</th>
+          <th>Onde Publicar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Artigo Acadêmico de TCC</td><td>Síntese de um trabalho de conclusão de curso.</td><td>Estudantes universitários</td><td>Resumo acadêmico para banca avaliadora</td><td>Repositórios de TCC, sites da faculdade</td></tr>
+        <tr><td>Artigo Científico</td><td>Resultados originais de uma pesquisa com método científico.</td><td>Pesquisadores, acadêmicos</td><td>Estudo publicado com revisão por pares</td><td>Revistas científicas, eventos acadêmicos</td></tr>
+        <tr><td>Artigo de Atualização</td><td>Apresenta novidades e avanços em um campo específico.</td><td>Profissionais e estudantes</td><td>Tendências em IA generativa</td><td>Revistas, blogs técnicos</td></tr>
+        <tr><td>Artigo de Divulgação Científica</td><td>Traduz conceitos científicos para linguagem acessível.</td><td>Leitores em geral</td><td>Texto explicando buracos negros</td><td>Revistas como Superinteressante, blogs educativos</td></tr>
+        <tr><td>Artigo Didático</td><td>Explica conceitos ou temas para fins educativos.</td><td>Estudantes, professores</td><td>Texto explicando regra de três com metáforas</td><td>Portais educacionais, sites de estudo</td></tr>
+        <tr><td>Artigo de Estudo de Caso</td><td>Análise detalhada de uma situação real ou fictícia.</td><td>Acadêmicos e gestores</td><td>Impacto da IA numa escola pública</td><td>Revistas científicas, eventos de educação</td></tr>
+        <tr><td>Artigo de Revisão</td><td>Organiza e compara publicações sobre um tema.</td><td>Acadêmicos, pós-graduandos</td><td>Revisão sobre aprendizagem ativa</td><td>Periódicos acadêmicos</td></tr>
+        <tr><td>Artigo de Opinião</td><td>Expressa o ponto de vista do autor sobre determinado tema.</td><td>Leitores de portais e revistas</td><td>Análise crítica da escola tradicional</td><td>Jornais, blogs autorais</td></tr>
+        <tr><td>Artigo Jornalístico Noticioso</td><td>Relata fatos atuais com clareza e objetividade.</td><td>Público em geral</td><td>Notícia do lançamento de um app de IA</td><td>Jornais como G1, O Globo</td></tr>
+        <tr><td>Artigo Jornalístico de Opinião</td><td>Coluna pessoal com posicionamento sobre temas atuais.</td><td>Leitores de jornais</td><td>Coluna sobre uso ético da IA</td><td>Jornais, sites jornalísticos</td></tr>
+        <tr><td>Artigo Reflexivo</td><td>Explora uma ideia com base em experiências e observações.</td><td>Professores, formadores</td><td>Reflexão sobre ensino híbrido</td><td>Blogs educativos, revistas pedagógicas</td></tr>
+        <tr><td>Artigo Técnico</td><td>Descreve processos, sistemas ou procedimentos técnicos.</td><td>Profissionais da área</td><td>Configuração de servidores educacionais</td><td>Revistas técnicas, portais de tecnologia</td></tr>
+        <tr><td>Artigo Temático</td><td>Explora um único tema em profundidade.</td><td>Estudantes, especialistas</td><td>Artigo sobre inclusão digital</td><td>Revistas temáticas, portais acadêmicos</td></tr>
+        <tr><td>Artigo Crítico</td><td>Análise e julgamento fundamentado de um tema ou obra.</td><td>Acadêmicos, formadores</td><td>Crítica sobre metodologias ativas</td><td>Revistas acadêmicas, livros coletivos</td></tr>
+        <tr><td>Artigo Experimental</td><td>Relata o passo a passo de uma experiência controlada.</td><td>Cientistas, estudantes</td><td>Relato de um experimento de laboratório</td><td>Revistas científicas</td></tr>
+        <tr><td>Artigo Teórico</td><td>Baseado em conceitos e modelos já existentes.</td><td>Acadêmicos</td><td>Discussão sobre aprendizagem significativa</td><td>Periódicos acadêmicos</td></tr>
+        <tr><td>Artigo Inspiracional</td><td>Motiva e encoraja o leitor por meio de experiências e histórias.</td><td>Blogueiros, público geral</td><td>Relato de superação com uso da IA</td><td>Blogs motivacionais</td></tr>
+        <tr><td>Artigo de Tutorial</td><td>Passo a passo de como realizar uma tarefa.</td><td>Usuários iniciantes</td><td>Como usar o Canva com IA</td><td>Plataformas como Medium, blogs</td></tr>
+        <tr><td>Artigo Educacional Interativo</td><td>Incorpora elementos como quizzes, vídeos ou simulações.</td><td>Estudantes de EAD</td><td>Artigo com exercícios de matemática</td><td>Plataformas de aprendizagem online</td></tr>
+        <tr><td>Artigo de Curadoria</td><td>Organiza e apresenta uma seleção comentada de fontes.</td><td>Educadores, leitores informais</td><td>Lista comentada de ferramentas IA</td><td>Newsletters, blogs, portais</td></tr>
+      </tbody>
+    </table>
+
+<div style="text-align: center; margin-top: 40px;">
+  <a href="tipos-de-artigos.pdf" download class="btn-download" style="background-color: #6366f1; color: white; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block;">
+    <i class="fas fa-file-pdf"></i> Baixar PDF do Artigo
+  </a>
+</div>
+
+<section style="margin-top: 50px; padding: 30px 20px; background-color: #1e293b; border-radius: 12px;">
+  <h2 style="text-align: center; color: #facc15;">📚 Links Úteis para Aprimorar sua Escrita</h2>
+  <ul style="max-width: 800px; margin: 30px auto; list-style: none; padding-left: 0; font-size: 1.05em;">
+    <li style="margin-bottom: 15px;">
+      🔗 <a href="https://www.unifoa.edu.br/como-escrever-um-artigo-academico/" target="_blank" style="color: #38bdf8; text-decoration: underline;">Como escrever um artigo acadêmico</a>
+    </li>
+    <li style="margin-bottom: 15px;">
+      🔗 <a href="https://www.gov.br/pt-br/servicos/submeter-artigos-cientificos-para-periodicos" target="_blank" style="color: #38bdf8; text-decoration: underline;">Como publicar em periódicos científicos</a>
+    </li>
+    <li style="margin-bottom: 15px;">
+      🔗 <a href="https://undetectable.ai/blog/br/como-usar-a-ai-para-escrever-um-artigo/" target="_blank" style="color: #38bdf8; text-decoration: underline;">Como usar IA para estruturar artigos</a>
+    </li>
+  </ul>
+</section>
+
+<div class="compartilhar" style="margin-top: 40px; text-align: center;">
+  <p><strong>Compartilhe este conteúdo:</strong></p>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://ivomarlima.github.io/eduverso-ia/tipos_de_artigos.html" target="_blank" class="btn-social">
+    <i class="fab fa-facebook-f"></i> Facebook
+  </a>
+  <a href="https://api.whatsapp.com/send?text=Confira%20este%20conteúdo:%20https://ivomarlima.github.io/eduverso-ia/tipos_de_artigos.html" target="_blank" class="btn-social">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+  <a href="https://twitter.com/intent/tweet?url=https://ivomarlima.github.io/eduverso-ia/tipos_de_artigos.html&text=Veja%20uma%20tabela%20completa%20sobre%20os%20tipos%20de%20artigos%20mais%20usados!" target="_blank" class="btn-social">
+    <i class="fab fa-x-twitter"></i> Twitter
+  </a>
+  <button onclick="copiarLink()" class="btn-social">
+    <i class="fas fa-link"></i> Copiar Link
+  </button>
+</div>
+
+<script>
+  function copiarLink() {
+    navigator.clipboard.writeText("https://ivomarlima.github.io/eduverso-ia/tipos_de_artigos.html").then(() => {
+      alert("🔗 Link copiado para a área de transferência!");
+    }).catch(err => {
+      console.error("Erro ao copiar link:", err);
+      alert("❌ Não foi possível copiar o link.");
+    });
+  }
+</script>
+
+<!-- Rodapé -->
+<footer>
+  <div class="footer-icon">
+    <i class="fas fa-brain"></i>
+  </div>
+  <div>&copy; 2025 EduVerso IA | Criado por Ivomar Lima</div>
+</footer>
+
+
+<button id="topo" class="botao-topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Voltar ao topo">
+  <i class="fas fa-arrow-up"></i> Topo
+</button>
+<script>
+  const botaoTopo = document.getElementById('topo');
+
+window.addEventListener('scroll', () => {
+  const botaoTopo = document.getElementById('topo');
+  const rodape = document.querySelector('footer');
+  const distanciaRodape = rodape.getBoundingClientRect().top;
+
+  // Mostrar ou ocultar botão
+  botaoTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
+
+  // Subir botão antes do rodapé encostar
+  const alturaTela = window.innerHeight;
+  const margemRodape = 100;
+
+  if (distanciaRodape < alturaTela + margemRodape) {
+    botaoTopo.style.bottom = '127px'; // Sobe bastante
+  } else {
+    botaoTopo.style.bottom = '60px'; // Posição normal
+  }
+});
+
+</script>
+
+
+</body>
+
+<!-- Adicione o seguinte SCRIPT ao final da <body>, antes de </html> -->
+<script>
+function filtrarTabela(categoria) {
+  const linhas = document.querySelectorAll("tbody tr");
+  linhas.forEach(linha => {
+    const texto = linha.textContent.toLowerCase();
+    if (categoria === 'todos') {
+      linha.style.display = '';
+    } else if (categoria === 'Acadêmico') {
+      linha.style.display = /tcc|cient[ií]fico|revis[aã]o|cr[ií]tico|te[oó]rico/.test(texto) ? '' : 'none';
+    } else if (categoria === 'Jornalístico') {
+      linha.style.display = /jornal[ií]stico/.test(texto) ? '' : 'none';
+    } else if (categoria === 'Educacional') {
+      linha.style.display = /did[aá]tico|tutorial|educacional|interativo|curadoria|reflexivo/.test(texto) ? '' : 'none';
+    } else {
+      linha.style.display = 'none';
+    }
+  });
+}
+
+
+</script>
+</html>
